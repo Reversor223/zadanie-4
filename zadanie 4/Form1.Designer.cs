@@ -56,6 +56,19 @@
             this.btnRotate270.Text = "Rotate 270°";
             this.btnRotate270.Click += new System.EventHandler(this.btnRotate270_Click);
 
+            // btnInvert
+            this.btnInvert.Location = new System.Drawing.Point(630, 180);
+            this.btnInvert.Size = new System.Drawing.Size(140, 30);
+            this.btnInvert.Text = "Invert Colors";
+            this.btnInvert.Click += new System.EventHandler(this.btnInvert_Click);
+
+            // btnUpsideDown
+            this.btnUpsideDown.Location = new System.Drawing.Point(630, 220);
+            this.btnUpsideDown.Size = new System.Drawing.Size(140, 30);
+            this.btnUpsideDown.Text = "Upside Down";
+            this.btnUpsideDown.Click += new System.EventHandler(this.btnUpsideDown_Click);
+
+
 
             // Form1
             this.ClientSize = new System.Drawing.Size(800, 430);

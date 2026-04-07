@@ -50,7 +50,31 @@ namespace zadanie_4
             loadedImage.RotateFlip(RotateFlipType.Rotate270FlipNone);
             pictureBox1.Image = loadedImage;
         }
+        private void btnInvert_Click(object sender, EventArgs e)
+        {
+            if (loadedImage == null) return;
 
-       
+            for (int y = 0; y < loadedImage.Height; y++)
+            {
+                for (int x = 0; x < loadedImage.Width; x++)
+                {
+                    Color c = loadedImage.GetPixel(x, y);
+                    Color inverted = Color.FromArgb(255 - c.R, 255 - c.G, 255 - c.B);
+                    loadedImage.SetPixel(x, y, inverted);
+                }
+            }
+
+            pictureBox1.Image = loadedImage;
+        }
+
+        private void btnUpsideDown_Click(object sender, EventArgs e)
+        {
+            if (loadedImage == null) return;
+
+            loadedImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
+            pictureBox1.Image = loadedImage;
+        }
+
+
     }
 }
