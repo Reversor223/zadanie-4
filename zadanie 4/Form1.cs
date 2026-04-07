@@ -27,8 +27,6 @@ namespace zadanie_4
             }
         }
 
-        
-
         private void btnOnlyGreen_Click(object sender, EventArgs e)
         {
             if (loadedImage == null) return;
