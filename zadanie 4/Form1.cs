@@ -50,6 +50,7 @@ namespace zadanie_4
             loadedImage.RotateFlip(RotateFlipType.Rotate270FlipNone);
             pictureBox1.Image = loadedImage;
         }
+
         private void btnInvert_Click(object sender, EventArgs e)
         {
             if (loadedImage == null) return;
