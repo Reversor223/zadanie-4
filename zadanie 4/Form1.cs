@@ -7,14 +7,17 @@ namespace zadanie_4
     public partial class Form1 : Form
     {
         private Bitmap loadedImage;
+
         public Form1()
         {
             InitializeComponent();
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
         private void btnLoad_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -68,6 +71,23 @@ namespace zadanie_4
             pictureBox1.Image = loadedImage;
         }
 
+        private void btnOnlyGreen_Click(object sender, EventArgs e)
+        {
+            if (loadedImage == null) return;
+
+            for (int y = 0; y < loadedImage.Height; y++)
+            {
+                for (int x = 0; x < loadedImage.Width; x++)
+                {
+                    Color c = loadedImage.GetPixel(x, y);
+                    Color greenOnly = Color.FromArgb(0, c.G, 0);
+                    loadedImage.SetPixel(x, y, greenOnly);
+                }
+            }
+
+            pictureBox1.Image = loadedImage;
+        }
+
         private void btnUpsideDown_Click(object sender, EventArgs e)
         {
             if (loadedImage == null) return;
@@ -75,7 +95,6 @@ namespace zadanie_4
             loadedImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
             pictureBox1.Image = loadedImage;
         }
-
-
     }
 }
+
