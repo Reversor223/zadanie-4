@@ -69,6 +69,11 @@
             this.btnUpsideDown.Click += new System.EventHandler(this.btnUpsideDown_Click);
 
 
+            // btnOnlyGreen
+            this.btnOnlyGreen.Location = new System.Drawing.Point(630, 260);
+            this.btnOnlyGreen.Size = new System.Drawing.Size(140, 30);
+            this.btnOnlyGreen.Text = "Only Green";
+            this.btnOnlyGreen.Click += new System.EventHandler(this.btnOnlyGreen_Click);
 
 
             // Form1
